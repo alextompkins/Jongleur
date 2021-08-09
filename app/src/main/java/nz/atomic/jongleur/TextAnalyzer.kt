@@ -21,7 +21,7 @@ class TextAnalyzer : ImageAnalysis.Analyzer {
             inProgress = true
 
             // Pass image to an ML Kit Vision API
-            val inputImage = InputImage.fromMediaImage(it, 0) // TODO handle rotation properly
+            val inputImage = InputImage.fromMediaImage(it, imageProxy.imageInfo.rotationDegrees)
             recognizer.process(inputImage)
                 .addOnSuccessListener { visionText ->
                     if (visionText.text.isBlank()) {
