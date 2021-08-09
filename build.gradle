@@ -7,5 +7,6 @@ task clean(type: Delete) {
 buildscript {
     ext {
         compose_version = '1.0.1'
+        camerax_version = '1.0.1'
     }
 }
