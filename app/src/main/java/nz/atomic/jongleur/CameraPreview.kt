@@ -34,7 +34,7 @@ fun CameraPreview() {
                     .requireLensFacing(CameraSelector.LENS_FACING_BACK)
                     .build()
 
-                val analyzer = ImageAnalyzer()
+                val analyzer = TextAnalyzer()
 
                 val imageAnalysis = ImageAnalysis.Builder()
                     .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
